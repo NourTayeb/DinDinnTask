@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="20dp"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:layout_marginTop="25dp"
+    card_view:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="center"
+            android:src="@drawable/as" />
+
+        <TextView
+            android:id="@+id/productname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="productname"
+            android:textColor="@color/productname"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ingriedient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="one egg, and one meat"
+            android:textColor="@color/ingriedient" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="30dp"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/dimentions"
+                android:padding="15dp"
+                android:textColor="@color/ingriedient"
+                android:layout_width="0dp"
+                android:text="100 gm, 10 cm"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+            <Button
+                android:id="@+id/addToCart"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textColor="@color/white"
+                android:text="20 usd"
+                android:background="@drawable/layout_border_black_button"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:visibility="gone"
+                android:id="@+id/addedToCart"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textColor="@color/white"
+                android:text="@string/added_one"
+                android:background="@drawable/layout_border_green_button"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
